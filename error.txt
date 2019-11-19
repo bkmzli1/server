@@ -1,0 +1,17 @@
+java.lang.RuntimeException: Exception in Application start method
+	at com.sun.javafx.application.LauncherImpl.launchApplication1(LauncherImpl.java:917)
+	at com.sun.javafx.application.LauncherImpl.lambda$launchApplication$1(LauncherImpl.java:182)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.NullPointerException
+	at java.util.Objects.requireNonNull(Objects.java:203)
+	at ru.blmz.Server.util.stage.StageStandart.<init>(StageStandart.java:21)
+	at ru.blmz.Server.Main.start(Main.java:49)
+	at com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$8(LauncherImpl.java:863)
+	at com.sun.javafx.application.PlatformImpl.lambda$runAndWait$7(PlatformImpl.java:326)
+	at com.sun.javafx.application.PlatformImpl.lambda$null$5(PlatformImpl.java:295)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.application.PlatformImpl.lambda$runLater$6(PlatformImpl.java:294)
+	at com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:95)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$null$4(WinApplication.java:186)
+	... 1 more
