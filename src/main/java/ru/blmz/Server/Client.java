@@ -12,11 +12,11 @@ public class Client {
 
 
     public static void main(String[] args) throws IOException {
+        int col = 1;//кол клиентов
         for (int i = 0; i < 1; i++) {
-            final Socket[] socket = new Socket[1];
-            final ObjectOutputStream[] outputStream = new ObjectOutputStream[1];
-            final ObjectInputStream[] inputStream = new ObjectInputStream[1];
-            final int[] number = {0};
+            final Socket[] socket = new Socket[1];//создание сокета
+            final ObjectOutputStream[] outputStream = new ObjectOutputStream[1];//создание ввода
+            final ObjectInputStream[] inputStream = new ObjectInputStream[1];//создание вывода
             new Thread(new Runnable() {//создаём поток
                 @Override
                 public void run() {
@@ -37,14 +37,15 @@ public class Client {
                 @Override
                 public void run() {
                     try {
-                        Thread.sleep(5000);
+                        Thread.sleep(5000);//задержка
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
                     //while (true) {
 
                         try {
-                            JSONObject obj = new JSONObject();
+                            JSONObject obj = new JSONObject();//создаём json
+                            //добовляем параметры
                             obj.put("name", "Иванов Михаил");
                             obj.put("age", new Integer(21));
 
