@@ -11,9 +11,15 @@ public class MainController {
     ObservableList<Object> langs = FXCollections.observableArrayList();
 
     public void initialize() {
-        Server server = new Server(langs,log);
-        Thread threadServer = new Thread(server,"Server thread");
-        threadServer.start();
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                Server server = new Server(langs,log);
+                Thread threadServer = new Thread(server,"Server thread");
+                threadServer.start();
+            }
+        }).start();
+
     }
 
 }
